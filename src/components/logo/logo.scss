@@ -1,0 +1,23 @@
+@import '../../style/global.scss';
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: pixelToRem(4) 0;
+    img {
+        height: pixelToRem(38);
+        width: auto;
+        margin-right: pixelToRem(10);
+    }
+    h1 {
+        color: $base-color;
+        font-size: pixelToRem(20);
+    }
+}
+
+@media (max-width: $xsmall) {
+    .logo {
+        margin: pixelToRem(5) 0;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../style/global.scss';
+
+.user {
+    display: flex;
+    align-items: center;
+    h1 {
+        color: $base-color;
+        font-size: pixelToRem(14);
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $base-color;
+        border-radius: 50%;
+        height: pixelToRem(35);
+        width: pixelToRem(35);
+        margin-left: pixelToRem(18);
+        font-weight: bold;
+    }
+}
+
+@media (max-width: $xsmall) {
+    .user {
+        margin: pixelToRem(5) 0;
+        justify-content: center;
+    }
+}
