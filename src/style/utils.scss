@@ -5,4 +5,5 @@
 @mixin container {
     width: 100%;
     max-width: pixelToRem(960);
+    margin: auto;
 }

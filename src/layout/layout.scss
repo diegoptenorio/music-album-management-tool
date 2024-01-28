@@ -1,28 +1,36 @@
 @import '../style/global.scss';
 
-header {
-    background: $brand-pink-color;
-    background: linear-gradient(
-        90deg,
-        $brand-pink-color 0%,
-        $brand-purple-color 100%
-    );
-    .container {
+.layout {
+    > header {
+        background: $brand-pink-color;
+        background: linear-gradient(
+            90deg,
+            $brand-pink-color 0%,
+            $brand-purple-color 100%
+        );
+        .container {
+            @include container;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    > main {
         @include container;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
+        padding: pixelToRem(15) 0;
+    }
+    > footer {
+        background-color: $footer-background-color;
+        text-align: center;
+        padding: pixelToRem(10) 0;
     }
 }
-footer {
-    background-color: $footer-background-color;
-    text-align: center;
-    padding: pixelToRem(10) 0;
-}
-
 
 @media (max-width: $xsmall) {
-    .container {
-        flex-direction: column;
+    .layout {
+        > header {
+            .container {
+                flex-direction: column;
+            }
+        }
     }
 }

@@ -1,0 +1,15 @@
+@import './../../style/global.scss';
+
+article {
+    background-color: $base-color;
+    border-radius: pixelToRem(10);
+    header {
+        h1 {
+            color: $brand-purple-color;
+            font-weight: bold;
+        }
+    }
+    section {
+        padding: 0 pixelToRem(36) pixelToRem(22);
+    }
+}
