@@ -1,9 +1,5 @@
-@function pixelToRem($value) {
-    @return $value * 0.063rem;
-}
-
 @mixin container {
     width: 100%;
-    max-width: pixelToRem(960);
+    max-width: 96rem;
     margin: auto;
 }

@@ -16,12 +16,12 @@
     }
     > main {
         @include container;
-        padding: pixelToRem(15) 0;
+        padding: 1.5rem 0;
     }
     > footer {
         background-color: $footer-background-color;
         text-align: center;
-        padding: pixelToRem(10) 0;
+        padding: 1rem 0;
     }
 }
 
