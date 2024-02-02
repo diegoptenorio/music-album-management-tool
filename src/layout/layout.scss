@@ -37,13 +37,17 @@
         }
     }
 }
-@media (max-width: $xsmall) {
+@media (max-width: $medium) {
     .layout {
         > header {
             .container {
                 width: auto;
                 padding: 0 2rem;
             }
+        }
+        > main {
+                width: auto;
+                padding: 2rem 2rem 0 2rem;
         }
     }
 }
