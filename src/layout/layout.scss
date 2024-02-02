@@ -41,7 +41,8 @@
     .layout {
         > header {
             .container {
-                flex-direction: column;
+                width: auto;
+                padding: 0 2rem;
             }
         }
     }
