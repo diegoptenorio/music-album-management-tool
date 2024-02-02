@@ -16,7 +16,13 @@
     }
     > main {
         @include container;
-        padding: 1.5rem 0;
+        padding-top: 2rem;
+        display: flex;
+        flex-flow: row;
+        gap: 0 2rem;
+        .column {
+            flex: 1;
+        }
     }
     > footer {
         background-color: $footer-background-color;
@@ -31,6 +37,9 @@
             .container {
                 flex-direction: column;
             }
+        }
+        > main {
+            flex-flow: column;
         }
     }
 }

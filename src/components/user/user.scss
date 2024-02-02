@@ -3,6 +3,7 @@
 .user {
     display: flex;
     align-items: center;
+    cursor: default;
     h1 {
         color: $base-color;
         font-size: 1.4rem;

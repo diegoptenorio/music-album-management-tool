@@ -1,0 +1,17 @@
+@import '../../style/global.scss';
+
+button {
+    background: $brand-pink-color;
+    background: linear-gradient(
+        90deg,
+        $brand-pink-color 0%,
+        $brand-purple-color 100%
+    );
+    border: 0;
+    height: fit-content;
+    cursor: pointer;
+    .icon {
+        display: block;
+        padding: 1rem 1rem .6rem 1rem;
+    }
+}

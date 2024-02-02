@@ -1,0 +1,60 @@
+@import '../../style/global.scss';
+
+.search {
+    padding: 2.2rem;
+}
+.list {
+    max-height: calc(100vh - 26.8rem);
+    overflow-x: auto;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        thead {
+            background-color: $table-head-color;
+            border-top: 2rem solid $table-head-color;
+            border-bottom: 2rem solid $table-head-color;
+            tr {
+                th {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: $label-color;
+                    text-align: left;
+                    padding: 0 2rem;
+                    border-right: 1px solid $input-border-color;
+                }
+                :last-child {
+                    border: 0;
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-top: 1px solid $input-border-color;
+                td {
+                    font-size: 1.7rem;
+                    padding: 2rem;  
+                    color: $label-color;
+                    img {
+                        height: 1.6rem;
+                        margin-right: 1.8rem;
+                    }
+                    :last-child {
+                        margin-right: 0;
+                    }
+                }
+                :last-child {
+                    opacity: 0;
+                }
+                &:hover {
+                    background-color: $focused-table-row;
+                    td {
+                        color: $focused-table-row-text;
+                    }
+                    :last-child {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
