@@ -4,57 +4,109 @@
     padding: 2.2rem;
 }
 .list {
-    max-height: calc(100vh - 26.8rem);
+    max-height: calc(100vh - 32.7rem);
     overflow-x: auto;
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        thead {
-            background-color: $table-head-color;
-            border-top: 2rem solid $table-head-color;
-            border-bottom: 2rem solid $table-head-color;
-            tr {
-                th {
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                    color: $label-color;
-                    text-align: left;
-                    padding: 0 2rem;
-                    border-right: 1px solid $input-border-color;
-                }
-                :last-child {
-                    border: 0;
-                }
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+        background-color: $table-head-color;
+        border-top: 2rem solid $table-head-color;
+        border-bottom: 2rem solid $table-head-color;
+        border-right: 3.4rem solid $table-head-color;
+        tr {
+            th {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $label-color;
+                text-align: left;
+                padding: 0 2rem;
+                border-right: 1px solid $input-border-color;
+            }
+            :last-child {
+                border: 0;
             }
         }
-        tbody {
-            tr {
-                border-top: 1px solid $input-border-color;
+    }
+    tbody {
+        tr {
+            border-top: 1px solid $input-border-color;
+            td {
+                font-size: 1.7rem;
+                padding: 2rem;  
+                color: $label-color;
+                img {
+                    height: 1.6rem;
+                    margin-right: 1.8rem;
+                }
+                :last-child {
+                    margin-right: 0;
+                }
+            }
+            :last-child {
+                opacity: 0;
+            }
+            &:hover {
+                background-color: $focused-table-row;
                 td {
-                    font-size: 1.7rem;
-                    padding: 2rem;  
-                    color: $label-color;
-                    img {
-                        height: 1.6rem;
-                        margin-right: 1.8rem;
-                    }
-                    :last-child {
-                        margin-right: 0;
-                    }
+                    color: $focused-table-row-text;
                 }
                 :last-child {
-                    opacity: 0;
-                }
-                &:hover {
-                    background-color: $focused-table-row;
-                    td {
-                        color: $focused-table-row-text;
-                    }
-                    :last-child {
-                        opacity: 1;
-                    }
+                    opacity: 1;
                 }
             }
         }
+    }
+}
+.colName {
+    width: 30%;
+}
+.colRating {
+    width: 18%;
+}
+@media (max-width: $xsmall) {
+    .list {
+        max-height: none;
+        overflow-x: visible;
+    }
+    table {
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+            td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: right;
+                &::before {
+                    content: attr(data-label);
+                    float: left;
+                    font-weight: bold;
+                }
+            }
+            :last-child {
+                opacity: 1 !important;
+                border-bottom: 0;
+            }
+        }
+    }
+    .colName {
+        width: auto;
+    }
+    .colRating {
+        width: auto;
     }
 }

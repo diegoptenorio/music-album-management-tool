@@ -30,16 +30,19 @@
         padding: 1rem 0;
     }
 }
-
+@media (max-width: $small) {
+    .layout {
+        > main {
+            flex-flow: column;
+        }
+    }
+}
 @media (max-width: $xsmall) {
     .layout {
         > header {
             .container {
                 flex-direction: column;
             }
-        }
-        > main {
-            flex-flow: column;
         }
     }
 }
