@@ -85,8 +85,7 @@ const useMyArtists = () => {
     const { value } = event.target;
     setSearchValue(value);
     const filteredList = artists.filter(
-      (artist) => artist.name.includes(value) === true
-    );
+      (artist) => artist.name.toUpperCase().includes(value.toUpperCase()));
     setArtistList(filteredList);
   }
   return {
