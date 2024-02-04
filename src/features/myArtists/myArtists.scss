@@ -4,7 +4,7 @@
     padding: 2.2rem;
 }
 .list {
-    max-height: calc(100vh - 32.7rem);
+    height: calc(100vh - 32.5rem);
     overflow-x: auto;
 }
 table {
@@ -67,10 +67,6 @@ table {
     width: 18%;
 }
 @media (max-width: $xsmall) {
-    .list {
-        max-height: none;
-        overflow-x: visible;
-    }
     table {
         thead {
             border: none;

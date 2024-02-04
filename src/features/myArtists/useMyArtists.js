@@ -79,21 +79,21 @@ const artists = [
 ];
 
 const useMyArtists = () => {
-    const [searchValue, setSearchValue] = useState('');
-    const [artistList, setArtistList] = useState(artists);
-    const handleSearch = (event) => {
-        const { value } = event.target;
-        setSearchValue(value);
-        const filteredList = artists.filter(
-          (artist) => artist.name.includes(value) === true
-        );
-        setArtistList(filteredList);
-    }
+  const [searchValue, setSearchValue] = useState('');
+  const [artistList, setArtistList] = useState(artists);
+  const handleSearch = (event) => {
+    const { value } = event.target;
+    setSearchValue(value);
+    const filteredList = artists.filter(
+      (artist) => artist.name.includes(value) === true
+    );
+    setArtistList(filteredList);
+  }
   return {
-        artistList,
-        searchValue,
-        handleSearch
-    };
+    artistList,
+    handleSearch,
+    searchValue,
+  };
 };
 
 export default useMyArtists;

@@ -3,7 +3,7 @@ import PlusIcon from "../../assets/img/plus.svg";
 import { Button, Container } from "../../components";
 import { MyArtistsList, MyArtistsSearch } from ".";
 
-export const MyArtists = ({ children }) => {
+export const MyArtists = () => {
   const { artistList, handleSearch, searchValue } = useMyArtists();
   return (
     <Container>
